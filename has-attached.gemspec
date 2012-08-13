@@ -17,9 +17,11 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     "Gemfile",
+    "Gemfile.lock",
     "README.md",
     "Rakefile",
     "VERSION",
+    "has-attached.gemspec",
     "lib/generators/has-attached/install_generator.rb",
     "lib/has-attached.rb",
     "lib/has-attached/engine.rb"
