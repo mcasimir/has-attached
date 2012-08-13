@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "has-attached.gemspec",
+    "lib/generators/has_attached/install_generator.rb",
     "lib/has-attached.rb",
     "lib/has-attached/engine.rb"
   ]
