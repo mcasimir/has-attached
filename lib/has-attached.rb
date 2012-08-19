@@ -36,7 +36,7 @@ module HasAttached
       options[:path] ||= ":rails_root/public/attachments/:class/:id/:attachment/:style/:basename.:extension"
 
       @all_styles ||= (YAML.load_file(Rails.root.join("config", "styles.yml")) rescue {"styles" => {}})["styles"]      
-      options[:styles] = @all_styles.fetch(self.name.underscore, {}).fetch(name.to_s, {})
+      options[:styles] = @all_styles.fetch(self.name.underscore, {}).fetch(name.to_s, {}).symbolize_keys
       
       if Rails.env.production? && Rails.application.config.respond_to?(:upload_attachments_to_s3) && Rails.application.config.upload_attachments_to_s3
         options[:storage] = 's3'
