@@ -42,7 +42,7 @@ module HasAttached
         options[:storage] = 's3'
         options[:s3_credentials] = Rails.root.join("config", "s3.yml")
         options[:path] = "/attachments/:class/:id/:attachment/:style/:basename.:extension"
-        options[:url] = :s3_domain_url
+        options[:url] = ":s3_domain_url"
       else
         options[:storage] = 'filesystem'
       end
