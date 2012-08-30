@@ -31,7 +31,7 @@ module HasAttached
   module ClassMethods
 
     def has_attached(name, options = {})
-
+      
       options[:url]  ||= "/attachments/:class/:id/:attachment/:style/:basename.:extension"
       options[:path] ||= ":rails_root/public/attachments/:class/:id/:attachment/:style/:basename.:extension"
 
@@ -58,6 +58,18 @@ module HasAttached
           file_name = record.send(:"#{name}_file_name")
           record.errors.add name, "Paperclip returned errors for file '#{file_name}' - check ImageMagick installation or image source file."
           false
+        end
+      end
+      
+      attr_accessor :"#{name}_delete"
+
+      define_method :"#{name}_delete" do
+        false
+      end 
+      
+      define_method :"#{name}_delete=" do |val|
+        if val == "1"
+          send(name).clear
         end
       end
 

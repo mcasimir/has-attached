@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "has-attached"
-  s.version = "0.1.9"
+  s.version = "0.2.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["mcasimir"]
-  s.date = "2012-08-22"
+  s.date = "2012-08-30"
   s.description = "ActiveRecordSchema attachments with Paperclip"
   s.email = "maurizio.cas@gmail.com"
   s.extra_rdoc_files = [
