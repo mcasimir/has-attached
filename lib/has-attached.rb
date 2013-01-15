@@ -34,6 +34,7 @@ module HasAttached
       
       options[:url]  ||= "/attachments/:class/:id/:attachment/:style/:basename.:extension"
       options[:path] ||= ":rails_root/public/attachments/:class/:id/:attachment/:style/:basename.:extension"
+      options[:processors] ||= [:auto_orient, :thumbnail]
       
       unless options[:styles]
         @all_styles ||= (YAML.load_file(Rails.root.join("config", "styles.yml")) rescue {"styles" => {}})["styles"]      
