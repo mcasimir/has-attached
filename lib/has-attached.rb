@@ -24,6 +24,7 @@ require 'aws-sdk'
 require 'paperclip'
 require 'flash_cookie_session'
 require 'has-attached/engine'
+require 'paperclip/auto_orient'
 
 module HasAttached
   extend ActiveSupport::Concern  

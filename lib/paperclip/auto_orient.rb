@@ -1,3 +1,5 @@
+require 'paperclip'
+
 module Paperclip
   class AutoOrient < Paperclip::Processor 
     def initialize(file, options = {}, *args)

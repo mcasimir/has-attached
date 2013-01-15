@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "has-attached"
-  s.version = "0.2.4"
+  s.version = "0.2.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["mcasimir"]
-  s.date = "2012-09-24"
+  s.date = "2013-01-15"
   s.description = "ActiveRecordSchema attachments with Paperclip"
   s.email = "maurizio.cas@gmail.com"
   s.extra_rdoc_files = [
@@ -24,7 +24,8 @@ Gem::Specification.new do |s|
     "has-attached.gemspec",
     "lib/generators/has_attached/install_generator.rb",
     "lib/has-attached.rb",
-    "lib/has-attached/engine.rb"
+    "lib/has-attached/engine.rb",
+    "lib/paperclip/auto_orient.rb"
   ]
   s.homepage = "http://github.com/mcasimir/kaminari-bootstrap"
   s.licenses = ["MIT"]
